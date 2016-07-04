@@ -1,0 +1,42 @@
+{
+  "name": "mylesshannon.me",
+  "description": "My personal webpage",
+  "main": "Gruntfile.js",
+  "authors": [
+    "Myles Shannon"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/MylesShannon/mylesshannon.me",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "dist",
+    ".tmp",
+    ".grunt",
+    "bin",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "resolutions": {
+    "jquery": "2.2.3"
+  },
+  "dependencies": {
+    "jquery": "^2.2.3",
+    "bootstrap": "^3.3.6",
+    "font-awesome": "^4.6.3"
+  },
+  "exportsOverride": {
+    "jquery": {
+      "js": "dist/jquery.min.js"
+    },
+    "bootstrap": {
+      "js": "dist/js/bootstrap.min.js",
+      "fonts": "dist/fonts/*"
+    },
+    "font-awesome": {
+      "fonts": "fonts/*"
+    }
+  }
+}
