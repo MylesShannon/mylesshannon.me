@@ -20,16 +20,30 @@
     "tests"
   ],
   "resolutions": {
+    "angular": "1.5.7",
     "jquery": "2.2.3"
   },
   "dependencies": {
     "jquery": "^2.2.3",
     "bootstrap": "^3.3.6",
-    "font-awesome": "^4.6.3"
+    "font-awesome": "^4.6.3",
+    "angular-route": "^1.5.7"
   },
   "exportsOverride": {
     "jquery": {
       "js": "dist/jquery.min.js"
+    },
+    "angular": {
+      "js": [
+        "angular.min.js",
+        "angular.min.js.map"
+      ]
+    },
+    "angular-route": {
+      "js": [
+        "angular-route.min.js",
+        "angular-route.min.js.map"
+      ]
     },
     "bootstrap": {
       "js": "dist/js/bootstrap.min.js",

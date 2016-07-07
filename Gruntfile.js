@@ -27,7 +27,7 @@ module.exports = function(grunt) {
       dist: {
         options: {
           port: 9000,
-          hostname: 'localhost',
+          hostname: '0.0.0.0',
           open: true,
           base: 'dist/',
           middleware: function(connect, options, middlewares) {
@@ -62,8 +62,17 @@ module.exports = function(grunt) {
           removeComments: true
         },
         files: [
+          {expand: true, cwd: 'src/views', src: '**/*.html', dest: 'dist/views/'},
           {src: '.tmp/index.html', dest: 'dist/index.html'},
         ]
+      }
+    },
+    less: {
+      dist: {
+        files: {
+          '.tmp/bootstrap.css': 'src/less/bootstrap/bootstrap.less',
+          '.tmp/font-awesome.css': 'src/less/font-awesome/font-awesome.less'
+        }
       }
     },
     cssmin: {
@@ -104,14 +113,6 @@ module.exports = function(grunt) {
         }
       }
     },
-    less: {
-      dist: {
-        files: {
-          '.tmp/bootstrap.css': 'src/less/bootstrap/bootstrap.less',
-          '.tmp/font-awesome.css': 'src/less/font-awesome/font-awesome.less'
-        }
-      }
-    },
     watch: {
       dist: {
         tasks: ['build:dev'],
@@ -120,6 +121,16 @@ module.exports = function(grunt) {
           livereload: true
         }
       }
+    },
+    ngAnnotate: {
+        options: {
+            singleQuotes: true
+        },
+        dist: {
+            files: {
+              '.tmp/app.min.js':'src/app/*.js'
+            }
+        },
     },
     bower: {
       dist: {
@@ -145,27 +156,30 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-bower-task');
   grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-ng-annotate');
+  grunt.loadNpmTasks('grunt-contrib-jasmine');
 
 
-  grunt.registerTask('test', ['jshint']);
+  grunt.registerTask('test', ['jshint']); // test all app JS files and the Gruntfiles.js
 
-  grunt.registerTask('serve', ['build:dev', 'connect', 'watch']);
+  grunt.registerTask('serve', ['build:dev', 'connect', 'watch']); // build /src, then host a web server @ localhost:9000 w/ /dist, then build /src agian on file change
 
-  grunt.registerTask('default', ['test', 'serve']);
+  grunt.registerTask('default', ['build:dev', 'connect:dist:keepalive']); // build /src, then open a web server @ localhoset:9000 w/ /dist
 
   grunt.registerTask('build', function(target) {
     if(target === undefined) {
-      target = 'dev';
+      target = 'dev'; // build target dev if not otherwise specified
     }
     grunt.task.run([
-      'bower',
-      'less',
-      'copy',
-      'uglify',
-      'htmlbuild:'+target,
-      'cssmin',
-      'htmlmin',
-      'clean'
+      'bower', // install all bower libraries into /dist/libs
+      'less', // compile bootstrap & flat-ui less
+      'copy', // copy analytics.js nad robots.txt to /dist
+      'ngAnnotate', // annotate Angular app code to properly uglify
+      'uglify', // uglify app JS
+      'htmlbuild:'+target, // add analytics.js to html if target is 'dist'
+      'cssmin', // minify less and styles.css
+      'htmlmin', // minify html, including index.html & partials & directives
+      'clean' // remove /.tmp directory
     ]);
   });
 
