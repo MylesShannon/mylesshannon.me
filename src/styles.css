@@ -2,6 +2,28 @@ body {
 	height: 100%;
 }
 
+#content {
+	padding-top: 55px;
+	height: 100vh;
+	box-shadow: 0 0 20px #888888;
+}
+
 h1,h2,h3,h3 {
 	text-align: center;
+}
+
+a, a:active, a:hover, a:focus, a:visted {
+	text-decoration: none;
+}
+
+.github-button { 
+	color: #000000;
+}
+
+.facebook-button {
+	color: #3b5998;
+}
+
+.twitter-button {
+	color: #00aced;
 }
