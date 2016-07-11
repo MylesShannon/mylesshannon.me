@@ -1,0 +1,228 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-family: 'Open Sans', sans-serif;
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	height: 100%;
+	width: 100%;
+}
+
+a, a:active, a:hover, a:focus, a:visted {
+	text-decoration: none;
+}
+
+.github-button { 
+	color: #000000;
+}
+
+.facebook-button {
+	color: #3b5998;
+}
+
+.twitter-button {
+	color: #00aced;
+}
+
+.animate {
+	-webkit-animation-duration: 2500ms;
+  	animation-duration: 2500ms;
+	-webkit-animation-fill-mode: both;
+  	animation-fill-mode: both;
+}
+
+.main {
+	background-color: #BDC3C7;
+}
+
+/* smaller screen */
+@media only screen and (max-width: 930px), only screen and (max-height: 580px) {
+	.logo {
+		margin: 10px 0;
+		position: absolute;
+		z-index: 8;
+		animation-name: logoIn;
+	}
+
+	svg {
+		height: 100px;
+		width: 100px;
+	}
+
+	@keyframes logoIn {
+		0% {
+			opacity: 0;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+		65% {
+			opacity: 1;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+		100% {
+			left: 50%;
+			top: 0;
+			transform: translate(-50%, 0);
+		}
+	}
+
+	@keyframes mainIn {
+		0% {
+			opacity: 0;
+		}
+		65% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+
+	.main {
+		padding: 5px 10px;
+		position: fixed;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		height: calc(100% - 260px);
+		animation-name: mainIn;
+	}
+
+	.sidebar {
+		position: fixed;
+		top: 120px;
+		left: 0;
+		right: 0;
+		height: 120px;
+		animation-name: mainIn;
+	}
+
+	.sidebar h3 {
+		margin: 8px 0;
+		text-align: center;
+	}
+
+	.sidebar .nav {
+		text-align: center;
+	}
+
+	.sidebar .nav ul {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+
+	.sidebar .nav ul li {
+		padding: 10px 12px;
+		display: inline-block;
+	}
+
+	.sidebar .nav ul li a {
+		color: black;
+		text-decoration: none;
+	}
+
+	.sidebar .social-buttons {
+		padding-top: 8px;
+		text-align: center;
+	}
+}
+
+/* larger screen */
+@media only screen and (min-width: 930px) and (min-height: 581px) {
+	.logo {
+		margin: 25px;
+		position: absolute;
+		z-index: 8;
+		animation-name: logoIn;
+	}
+
+	svg {
+		height: 300px;
+		width: 300px;
+	}
+
+	@keyframes logoIn {
+		0% {
+			opacity: 0;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+		65% {
+			opacity: 1;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+		100% {
+			left: 0;
+			top: 0;
+			transform: translate(0, 0);
+		}
+	}
+
+	@keyframes mainIn {
+		0% {
+			opacity: 0;
+		}
+		65% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+
+	.main {
+		padding: 5px 10px;
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		width: calc(100% - 450px);
+		animation-name: mainIn;
+	}
+
+	.sidebar {
+		position: fixed;
+		top: 350px;
+		left: 0;
+		bottom: 0;
+		width: 350px;
+		padding: 10px 0 0 70px;
+		animation-name: mainIn;
+	}
+
+	.sidebar .nav {
+		padding-left: 5px;
+	}
+
+	.sidebar .nav ul {
+		padding: 0 0 0 5px;
+		margin: 0;
+		list-style: none;
+	}
+
+	.sidebar .nav ul li {
+		padding: 15px 0;
+	}
+
+	.sidebar .nav ul li a {
+		color: black;
+		text-decoration: none;
+	}
+
+	.sidebar .social-buttons {
+		position: fixed;
+		bottom: 20px;	
+	}
+}

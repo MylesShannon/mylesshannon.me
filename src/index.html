@@ -14,62 +14,58 @@
 		<meta name="msapplication-config" content="https://s3.amazonaws.com/myles-me-images/browserconfig.xml">
 		<meta name="theme-color" content="#ffffff">
 
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     	<link rel="stylesheet" type="text/css" href="styles.min.css">
     	<script type="text/javascript" src="libs/js/jquery/jquery.min.js"></script>
     	<script type="text/javascript" src="libs/js/angular/angular.min.js"></script>
     	<script type="text/javascript" src="libs/js/angular-route/angular-route.min.js"></script>
-    	<script type="text/javascript" src="libs/js/bootstrap/bootstrap.min.js"></script>
 
     	<script type="text/javascript" src="app.min.js"></script>
     </head>
     <body>
-    	<nav class="navbar navbar-default navbar-fixed-top">
-    		<div class="container">
-    			<div class="navbar-header">
-    				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
-				        <span class="sr-only">Toggle navigation</span>
-				        <span class="icon-bar"></span>
-				        <span class="icon-bar"></span>
-				        <span class="icon-bar"></span>
-				    </button>
-				    <a class="navbar-brand" href="/">Myles Shannon</a>
-				</div>
-				<div class="collapse navbar-collapse" id="navbar-collapse-1">
-			    	<ul class="nav navbar-nav">
-			        	<li><a href="/portfolio">Portfolio</a></li>
-			        	<li><a href="/contact">Contact</a></li>
-			      	</ul>
-			      	<div class="nav navbar-right">
-			      		<a class="navbar-link" target="_blank" href="https://github.com/MylesShannon">
-				        	<span class="fa-stack fa-lg navbar-btn github-button">
-								<i class="fa fa-square-o fa-stack-2x"></i>
-								<i class="fa fa-github fa-stack-1x"></i>
-							</span>
-						</a>
-			        	<a class="navbar-link" target="_blank" href="https://facebook.com/MylesShannon">
-			        		<span class="fa-stack fa-lg navbar-btn facebook-button">
-								<i class="fa fa-square-o fa-stack-2x"></i>
-								<i class="fa fa-facebook fa-stack-1x"></i>
-							</span>
-			        	</a>
-			        	<a class="navbar-link" target="_blank" href="https://twitter.com/MylesShannon">
-				        	<span class="fa-stack fa-lg navbar-btn twitter-button">
-								<i class="fa fa-square-o fa-stack-2x"></i>
-								<i class="fa fa-twitter fa-stack-1x"></i>
-							</span>
-						</a>
-			      	</div>
-			    </div>
-    		</div>
-    	</nav>
-
-    	<div id="content" class="container">
-	    	<div class="row">
-	    		<div class="col-md-12">
-	    			<div data-ng-view></div>
-	    		</div>
-	    	</div>
+    	<div class="animate logo">
+    		<svg viewBox="0 0 300 300">
+				<circle fill="#29ABE2" cx="27.778" cy="98.292" r="42.361"/>
+				<circle fill="#29ABE2" cx="15.451" cy="190.479" r="63.715"/>
+				<circle fill="#29ABE2" cx="62.673" cy="207.493" r="34.896"/>
+				<circle fill="#29ABE2" cx="96.528" cy="228.152" r="32.292"/>
+				<circle fill="#29ABE2" cx="122.743" cy="236.659" r="33.854"/>
+				<circle fill="#29ABE2" cx="164.67" cy="226.156" r="41.927"/>
+				<circle fill="#29ABE2" cx="225.004" cy="234.754" r="23.26"/>
+				<circle fill="#29ABE2" cx="189.597" cy="269.459" r="30.542"/>
+				<circle fill="#29ABE2" cx="212.673" cy="295.688" r="16.84"/>
+				<circle fill="#29ABE2" cx="273.264" cy="14.958" r="62.153"/>
+				<circle fill="#29ABE2" cx="268.581" cy="124.156" r="66.836"/>
+				<circle fill="#29ABE2" cx="61.458" cy="33.014" r="59.375"/>
+				<circle fill="#29ABE2" cx="185.417" cy="13.917" r="47.222"/>
+			</svg>
 	    </div>
+    	<div class="animate sidebar">
+    		<h3>Myles Shannon</h3>
+    		<div class="nav">
+	    		<ul>
+	    			<li><a href="/contact">Contact</a></li>
+	    			<li><a href="/portfolio">Portfolio</a></li>
+	    		</ul>
+	    	</div>
+    		<div class="social-buttons">
+	    		<a class="fa-stack fa-lg github-button" target="_blank" href="https://github.com/MylesShannon">
+					<i class="fa fa-square-o fa-stack-2x"></i>
+					<i class="fa fa-github fa-stack-1x"></i>
+				</a>
+	        	<a class="fa-stack fa-lg facebook-button" target="_blank" href="https://facebook.com/MylesShannon">
+					<i class="fa fa-square-o fa-stack-2x"></i>
+					<i class="fa fa-facebook fa-stack-1x"></i>
+	        	</a>
+	        	<a class="fa-stack fa-lg twitter-button" target="_blank" href="https://twitter.com/MylesShannon">
+					<i class="fa fa-square-o fa-stack-2x"></i>
+					<i class="fa fa-twitter fa-stack-1x"></i>
+				</a>
+			</div>
+    	</div>
+    	<div class="animate main">
+    		<div data-ng-view></div>
+    	</div>
     	<!-- build:script analytics -->
     	<!-- /build -->
     </body>

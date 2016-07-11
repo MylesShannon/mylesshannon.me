@@ -70,7 +70,6 @@ module.exports = function(grunt) {
     less: {
       dist: {
         files: {
-          '.tmp/bootstrap.css': 'src/less/bootstrap/bootstrap.less',
           '.tmp/font-awesome.css': 'src/less/font-awesome/font-awesome.less'
         }
       }
@@ -82,7 +81,7 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'dist/styles.min.css': ['.tmp/bootstrap.css', '.tmp/font-awesome.css', 'src/styles.css']
+          'dist/styles.min.css': ['src/css/normalize.css', '.tmp/font-awesome.css', 'src/css/styles.css']
         }
       }
     },

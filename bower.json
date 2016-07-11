@@ -25,7 +25,6 @@
   },
   "dependencies": {
     "jquery": "^2.2.3",
-    "bootstrap": "^3.3.6",
     "font-awesome": "^4.6.3",
     "angular-route": "^1.5.7"
   },
@@ -44,10 +43,6 @@
         "angular-route.min.js",
         "angular-route.min.js.map"
       ]
-    },
-    "bootstrap": {
-      "js": "dist/js/bootstrap.min.js",
-      "fonts": "dist/fonts/*"
     },
     "font-awesome": {
       "fonts": "fonts/*"
