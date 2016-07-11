@@ -87,7 +87,7 @@ a, a:active, a:hover, a:focus, a:visted {
 	}
 
 	.main {
-		padding: 5px 10px;
+		padding: 2px 15px;
 		position: fixed;
 		left: 0;
 		right: 0;
@@ -108,6 +108,11 @@ a, a:active, a:hover, a:focus, a:visted {
 	.sidebar h3 {
 		margin: 8px 0;
 		text-align: center;
+	}
+
+	.sidebar h3 a { 
+		text-decoration: none;
+		color: black;
 	}
 
 	.sidebar .nav {
@@ -183,7 +188,7 @@ a, a:active, a:hover, a:focus, a:visted {
 	}
 
 	.main {
-		padding: 5px 10px;
+		padding: 2px 15px;
 		position: fixed;
 		top: 0;
 		right: 0;
@@ -204,6 +209,11 @@ a, a:active, a:hover, a:focus, a:visted {
 
 	.sidebar .nav {
 		padding-left: 5px;
+	}
+
+	.sidebar h3 a { 
+		text-decoration: none;
+		color: black;
 	}
 
 	.sidebar .nav ul {
