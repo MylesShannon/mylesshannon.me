@@ -23,32 +23,34 @@
     	<script type="text/javascript" src="app.min.js"></script>
     </head>
     <body>
-    	<div class="animate logo">
-    		<svg viewBox="0 0 300 300">
-				<circle fill="#29ABE2" cx="27.778" cy="98.292" r="42.361"/>
-				<circle fill="#29ABE2" cx="15.451" cy="190.479" r="63.715"/>
-				<circle fill="#29ABE2" cx="62.673" cy="207.493" r="34.896"/>
-				<circle fill="#29ABE2" cx="96.528" cy="228.152" r="32.292"/>
-				<circle fill="#29ABE2" cx="122.743" cy="236.659" r="33.854"/>
-				<circle fill="#29ABE2" cx="164.67" cy="226.156" r="41.927"/>
-				<circle fill="#29ABE2" cx="225.004" cy="234.754" r="23.26"/>
-				<circle fill="#29ABE2" cx="189.597" cy="269.459" r="30.542"/>
-				<circle fill="#29ABE2" cx="212.673" cy="295.688" r="16.84"/>
-				<circle fill="#29ABE2" cx="273.264" cy="14.958" r="62.153"/>
-				<circle fill="#29ABE2" cx="268.581" cy="124.156" r="66.836"/>
-				<circle fill="#29ABE2" cx="61.458" cy="33.014" r="59.375"/>
-				<circle fill="#29ABE2" cx="185.417" cy="13.917" r="47.222"/>
-			</svg>
+    	<div id="logo" class="animate-logo">
+    		<a href="/">
+	    		<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
+					<circle fill="#29ABE2" cx="27.778" cy="98.292" r="42.361"/>
+					<circle fill="#29ABE2" cx="15.451" cy="190.479" r="63.715"/>
+					<circle fill="#29ABE2" cx="62.673" cy="207.493" r="34.896"/>
+					<circle fill="#29ABE2" cx="96.528" cy="228.152" r="32.292"/>
+					<circle fill="#29ABE2" cx="122.743" cy="236.659" r="33.854"/>
+					<circle fill="#29ABE2" cx="164.67" cy="226.156" r="41.927"/>
+					<circle fill="#29ABE2" cx="225.004" cy="234.754" r="23.26"/>
+					<circle fill="#29ABE2" cx="189.597" cy="269.459" r="30.542"/>
+					<circle fill="#29ABE2" cx="212.673" cy="295.688" r="16.84"/>
+					<circle fill="#29ABE2" cx="273.264" cy="14.958" r="62.153"/>
+					<circle fill="#29ABE2" cx="268.581" cy="124.156" r="66.836"/>
+					<circle fill="#29ABE2" cx="61.458" cy="33.014" r="59.375"/>
+					<circle fill="#29ABE2" cx="185.417" cy="13.917" r="47.222"/>
+				</svg>
+			</a>
 	    </div>
-    	<div class="animate sidebar">
+	    <div id="header" class="animate-header header">
     		<h3><a href="/">Myles Shannon</a></h3>
-    		<div class="nav">
+    		<div id="nav">
 	    		<ul>
 	    			<li><a href="/contact">Contact</a></li>
 	    			<li><a href="/portfolio">Portfolio</a></li>
 	    		</ul>
 	    	</div>
-    		<div class="social-buttons">
+    		<div id="social-buttons">
 	    		<a class="fa-stack fa-lg github-button" target="_blank" href="https://github.com/MylesShannon">
 					<i class="fa fa-square-o fa-stack-2x"></i>
 					<i class="fa fa-github fa-stack-1x"></i>
@@ -62,8 +64,8 @@
 					<i class="fa fa-twitter fa-stack-1x"></i>
 				</a>
 			</div>
-    	</div>
-    	<div class="animate main">
+		</div>
+    	<div id="content" class="animate-content">
     		<div data-ng-view></div>
     	</div>
     	<!-- build:script analytics -->
