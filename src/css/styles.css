@@ -3,16 +3,61 @@
 	font-family: 'Open Sans', sans-serif;
 }
 
-a, a:active, a:hover, a:focus, a:visted {
+body {
+	margin: 0;
+}
+
+a {
 	text-decoration: none;
 }
 
-#header h3 a:hover {
-	color: gray;
+#header h3 a, #header li a {
+	color: black;
 }
 
-#header #nav a:hover {
-	color: gray;
+#header ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+#header #nav ul li {
+	display: inline-block;
+}
+
+#header h3 {
+	margin: 0;
+	text-align: center;
+}
+
+#header #nav {
+	text-align: center;
+}
+
+#header #social-buttons {
+	text-align: center;
+}
+
+@keyframes headerIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes contentIn {
+	from {
+		height: auto;
+		overflow: auto;
+		opacity: 0;
+	}
+	to {
+		height: auto;
+		overflow: auto;
+		opacity: 1;
+	}
 }
 
 .github-button { 
@@ -80,28 +125,6 @@ a, a:active, a:hover, a:focus, a:visted {
 		}
 	}
 
-	@keyframes headerIn {
-		from {
-			opacity: 0;
-		}
-		to {
-			opacity: 1;
-		}
-	}
-
-	@keyframes contentIn {
-		from {
-			height: auto;
-			overflow: auto;
-			opacity: 0;
-		}
-		to {
-			height: auto;
-			overflow: auto;
-			opacity: 1;
-		}
-	}
-
 	#logo {
 		height: 30vw;
 		width: 30vw;
@@ -112,39 +135,15 @@ a, a:active, a:hover, a:focus, a:visted {
 		height: 110px;
 	}
 
-	#header h3 {
-		margin: 0;
-		text-align: center;
-	}
-
-	#header h3 a { 
-		text-decoration: none;
-		color: black;
-	}
-
 	#header #nav {
 		padding-top: 8px;
-		text-align: center;
-	}
-
-	#header #nav ul {
-		padding: 0;
-		margin: 0;
-		list-style: none;
 	}
 
 	#header #nav ul li {
 		padding: 0 20px;
-		display: inline-block;
-	}
-
-	#header #nav ul li a {
-		color: black;
-		text-decoration: none;
 	}
 
 	#header #social-buttons {
-		text-align: center;
 		padding: 11px 0;
 	}
 
@@ -181,26 +180,8 @@ a, a:active, a:hover, a:focus, a:visted {
 		}
 	}
 
-	@keyframes headerIn {
-		from {
-			opacity: 0;
-		}
-		to {
-			opacity: 1;
-		}
-	}
-
-	@keyframes contentIn {
-		from {
-			height: auto;
-			overflow: auto;
-			opacity: 0;
-		}
-		to {
-			height: auto;
-			overflow: auto;
-			opacity: 1;
-		}
+	#header a:hover {
+		color: gray;
 	}
 
 	#logo {
@@ -215,43 +196,21 @@ a, a:active, a:hover, a:focus, a:visted {
 		top: 20vw;
 		height: calc(100vh - 20vw);
 		width: 20vw;
-		text-align: center;
 	}
 
 	#header h3 {
-		margin: 0;
 		padding-bottom: 10px;
-		text-align: center;
-	}
-
-	#header h3 a { 
-		text-decoration: none;
-		color: black;
 	}
 
 	#header #nav {
 		padding: 0;
-		text-align: center;
-	}
-
-	#header #nav ul {
-		padding: 0;
-		margin: 0;
-		list-style: none;
 	}
 
 	#header #nav ul li {
 		padding: 10px 10px;
-		display: inline-block;
-	}
-
-	#header #nav ul li a {
-		color: black;
-		text-decoration: none;
 	}
 
 	#header #social-buttons {
-		text-align: center;
 		position: absolute;
 		width: 20vw;
 		left: 0;

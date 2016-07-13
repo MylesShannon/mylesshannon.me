@@ -81,7 +81,7 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'dist/styles.min.css': ['src/css/normalize.css', '.tmp/font-awesome.css', 'src/css/styles.css']
+          'dist/styles.min.css': ['.tmp/font-awesome.css', 'src/css/styles.css']
         }
       }
     },
