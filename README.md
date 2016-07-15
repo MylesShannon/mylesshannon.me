@@ -3,7 +3,6 @@ Where music is community.
 
 # do first
 npm install
-bower install
 
 # how to build for dist
 grunt build:dist

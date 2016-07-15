@@ -45,7 +45,8 @@
       ]
     },
     "font-awesome": {
-      "fonts": "fonts/*"
+      "fonts": "fonts/*",
+      "css": "css/font-awesome.min.css"
     }
   }
 }

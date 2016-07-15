@@ -67,21 +67,15 @@ module.exports = function(grunt) {
         ]
       }
     },
-    less: {
-      dist: {
-        files: {
-          '.tmp/font-awesome.css': 'src/less/font-awesome/font-awesome.less'
-        }
-      }
-    },
     cssmin: {
       options: {
+        sourceMap: false,
         shorthandCompacting: false,
         roundingPrecision: -1
       },
-      dist: {
+      vendor: {
         files: {
-          'dist/styles.min.css': ['.tmp/font-awesome.css', 'src/css/styles.css']
+          'dist/css/vendor.min.css': ['.tmp/font-awesome.css']
         }
       }
     },
@@ -134,13 +128,27 @@ module.exports = function(grunt) {
     bower: {
       dist: {
         options: {
-          install: false,
+          layout: 'byComponent',
           targetDir: './dist/libs'
         }
       }
     },
     clean: {
       folder: '.tmp/'
+    },
+    postcss: {
+      options: {
+        map: false,
+        processors: [
+          require('pixrem')(),
+          require('autoprefixer')({browsers: 'last 3 versions'}),
+          require('cssnano')()
+        ]
+      },
+      dist: {
+        src: 'src/css/styles.css',
+        dest: 'dist/css/styles.min.css'
+      }
     }
   });
 
@@ -152,11 +160,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-connect');
-  grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-bower-task');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-ng-annotate');
   grunt.loadNpmTasks('grunt-contrib-jasmine');
+  grunt.loadNpmTasks('grunt-postcss');
 
 
   grunt.registerTask('test', ['jshint']); // test all app JS files and the Gruntfiles.js
@@ -171,12 +179,12 @@ module.exports = function(grunt) {
     }
     grunt.task.run([
       'bower', // install all bower libraries into /dist/libs
-      'less', // compile bootstrap & flat-ui less
       'copy', // copy analytics.js nad robots.txt to /dist
       'ngAnnotate', // annotate Angular app code to properly uglify
       'uglify', // uglify app JS
       'htmlbuild:'+target, // add analytics.js to html if target is 'dist'
-      'cssmin', // minify less and styles.css
+      'postcss', // autoprefix for last 3 versions of web browsers and minify custome styles.css
+      //'cssmin', // concat and minify vendors.css
       'htmlmin', // minify html, including index.html & partials & directives
       'clean' // remove /.tmp directory
     ]);
