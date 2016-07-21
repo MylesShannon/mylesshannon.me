@@ -87,21 +87,19 @@ a {
 
 .animate-logo {
 	opacity: 0;
-	animation: logoIn 2500ms forwards;
+	animation: logoIn 2800ms forwards ease-in-out;
 }
 
 .animate-header {
 	opacity: 0;
-	animation: headerIn 2500ms forwards;
-	animation-delay: 2600ms;
+	animation: headerIn 1500ms forwards linear 2800ms;
 }
 
 .animate-content {
 	opacity: 0;
 	height: 0;
 	overflow: hidden;
-	animation: contentIn 2500ms forwards;
-	animation-delay: 2600ms;
+	animation: contentIn 1500ms forwards linear 2800ms;
 }
 
 @media print, speech {
@@ -125,9 +123,6 @@ a {
 			width: 26vw;
 			opacity: 0;
 			transform: translate(37vw, calc(50vh - 13vw));
-		}
-		10% {
-			opacity: 0;
 		}
 		50% {
 			height: 30vw;
@@ -176,9 +171,6 @@ a {
 			opacity: 0;
 			transform: translate(37vw, calc(50vh - 13vw));
 		}
-		10% {
-			opacity: 0;
-		}
 		50% {
 			height: 30vw;
 			width: 30vw;
@@ -195,7 +187,8 @@ a {
 	}
 
 	#header {
-		height: 110px;
+		height: 115px;
+		padding-top: 5px;
 	}
 
 	#header #nav {
@@ -212,7 +205,7 @@ a {
 
 	#content {
 		padding: 0 10px;
-		min-height: calc(100vh - (34vw + 110px) );
+		min-height: calc(100vh - (34vw + 115px) );
 	}
 }
 
@@ -225,9 +218,6 @@ a {
 			width: 12vw;
 			opacity: 0;
 			transform: translate(44vw, calc(50vh - 6vw));
-		}
-		10% {
-			opacity: 0;
 		}
 		50% {
 			height: 16vw;
@@ -254,11 +244,11 @@ a {
 	}
 
 	#header h3 {
-		padding: 10px 0;
+		padding-top: 20px;
 	}
 
 	#header #nav {
-		padding: 0;
+		padding-top: 10px;
 	}
 
 	#header #nav ul li {
