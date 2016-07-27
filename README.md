@@ -1,11 +1,11 @@
-# glipple-angular
-Where music is community.
+## software requirements
+Node.js with NPM
 
-# do first
+## do first
 npm install
 
-# how to build for dist
+## how to build for distribution
 grunt build:dist
 
-# how to serve for dev with livereload
+## how to serve for development with livereload
 grunt serve
