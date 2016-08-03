@@ -6,20 +6,23 @@ module.exports = function(grunt) {
     copy: {
       dist: {
         files: [
-          {expand: true, cwd: 'src/', src: 'analytics.js', dest: 'dist/'},
-          {expand: true, cwd: 'src/', src: 'robots.txt', dest: 'dist/'}
+          {src: 'src/analytics.js', dest: 'dist/analytics.js'},
+          {src: 'src/robots.txt', dest: 'dist/robots.txt'},
+          {src: 'src/me.jpg', dest: 'dist/me.jpg'}
         ],
       },
     },
     uglify: {
       options: {
+        banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n',
         report: 'min',
-        soureMap: true,
-        banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
+        mangle: {
+          except: ['jQuery']
+        }
       },
       dist: {
         files: {
-          'dist/app.min.js': '.tmp/app.min.js'
+          'dist/scripts.min.js': ['src/scripts.js']
         }
       }
     },
@@ -42,7 +45,7 @@ module.exports = function(grunt) {
       }
     },
     jshint: {
-      files: ['Gruntfile.js', 'src/app/*.js'],
+      files: ['Gruntfile.js', 'src/styles.js'],
       options: {
         globals: {
           jQuery: true,
@@ -65,18 +68,6 @@ module.exports = function(grunt) {
           {expand: true, cwd: 'src/views', src: '**/*.html', dest: 'dist/views/'},
           {src: '.tmp/index.html', dest: 'dist/index.html'},
         ]
-      }
-    },
-    cssmin: {
-      options: {
-        sourceMap: false,
-        shorthandCompacting: false,
-        roundingPrecision: -1
-      },
-      vendor: {
-        files: {
-          'dist/css/vendor.min.css': ['.tmp/font-awesome.css']
-        }
       }
     },
     htmlbuild: {
@@ -115,16 +106,6 @@ module.exports = function(grunt) {
         }
       }
     },
-    ngAnnotate: {
-        options: {
-            singleQuotes: true
-        },
-        dist: {
-            files: {
-              '.tmp/app.min.js':'src/app/*.js'
-            }
-        },
-    },
     bower: {
       dist: {
         options: {
@@ -146,8 +127,8 @@ module.exports = function(grunt) {
         ]
       },
       dist: {
-        src: 'src/css/styles.css',
-        dest: 'dist/css/styles.min.css'
+        src: 'src/styles.css',
+        dest: 'dist/styles.min.css'
       }
     }
   });
@@ -162,7 +143,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-bower-task');
   grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-ng-annotate');
   grunt.loadNpmTasks('grunt-contrib-jasmine');
   grunt.loadNpmTasks('grunt-postcss');
 
@@ -180,11 +160,9 @@ module.exports = function(grunt) {
     grunt.task.run([
       'bower', // install all bower libraries into /dist/libs
       'copy', // copy analytics.js nad robots.txt to /dist
-      'ngAnnotate', // annotate Angular app code to properly uglify
-      'uglify', // uglify app JS
+      'uglify:dist', // uglify app JS
       'htmlbuild:'+target, // add analytics.js to html if target is 'dist'
       'postcss', // autoprefix for last 3 versions of web browsers and minify custome styles.css
-      //'cssmin', // concat and minify vendors.css
       'htmlmin', // minify html, including index.html & partials & directives
       'clean' // remove /.tmp directory
     ]);

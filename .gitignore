@@ -1,10 +1,6 @@
-
 .tmp
 .grunt
 bower_components
 node_modules
 dist
 bin
-_SpecRunner.html
-src/less/.csscomb.json
-src/less/.csslintrc

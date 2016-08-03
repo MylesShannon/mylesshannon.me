@@ -25,24 +25,11 @@
   },
   "dependencies": {
     "jquery": "^2.2.3",
-    "font-awesome": "^4.6.3",
-    "angular-route": "^1.5.7"
+    "font-awesome": "^4.6.3"
   },
   "exportsOverride": {
     "jquery": {
       "js": "dist/jquery.min.js"
-    },
-    "angular": {
-      "js": [
-        "angular.min.js",
-        "angular.min.js.map"
-      ]
-    },
-    "angular-route": {
-      "js": [
-        "angular-route.min.js",
-        "angular-route.min.js.map"
-      ]
     },
     "font-awesome": {
       "fonts": "fonts/*",
