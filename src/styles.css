@@ -1,6 +1,6 @@
 * {
 	box-sizing: border-box;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Oxygen', sans-serif;
 }
 
 html {
@@ -36,23 +36,21 @@ svg {
 
 @keyframes contentIn {
 	from {
-		height: auto;
-		overflow: auto;
 		opacity: 0;
 	}
 	to {
-		height: auto;
-		overflow: auto;
 		opacity: 1;
 	}
 }
 
-@keyframes headerContentIn {
+@keyframes contentInHeight {
 	from {
-		opacity: 0;
+		height: 0;
+		overflow: hidden;
 	}
 	to {
-		opacity: 1;
+		height: auto;
+		overflow: auto;
 	}
 }
 
@@ -61,16 +59,15 @@ svg {
 	animation: headerIn 1500ms forwards linear 2800ms;
 }
 
-.animate-header-content {
-	opacity: 0;
-	animation: headerContentIn 1500ms forwards linear 2800ms;
-}
-
 .animate-content {
 	opacity: 0;
+	animation: contentIn 1500ms forwards linear 2800ms;
+}
+
+.animate-content-height {
 	height: 0;
 	overflow: hidden;
-	animation: contentIn 1500ms forwards linear 2800ms;
+	animation: contentInHeight 0s forwards ease-in-out 2800ms;
 }
 
 .animate-logo {
@@ -79,27 +76,74 @@ svg {
 }
 
 a {
-	display: block;
-	height: 100%;
-	width: 100%;
+	color: #000;
 	text-decoration: none;
 }
 
-#header h3 {
-	margin: 0;
-	color: black;
-	text-align: center;
+.bold {
+	font-weight: bold;
+}
+
+.italic {
+	font-style: italic;
 }
 
 #content {
-	height: auto;
-	overflow: auto;
-	background: white;
+	padding: 5px 0;
+	background: #FFF;
 	box-shadow: 3px 3px 20px 5px rgba(162,171,176,1);
+}
+
+.detail {
+	margin-bottom: 8pt;
+	color: #666666;
+}
+
+.head {
+	color: #45818e;
+	font-weight: bold;
+	margin-top: 18pt;
+	margin-bottom: 12pt;
+}
+
+.subhead {
+	margin-bottom: 12pt;
+	color: #434343;
+}
+
+.subhead.extra {
+	margin-top: 12pt;
+}
+
+.col-1, .col-2 {
+	padding: 0 10px;
+}
+
+.col-1 #experience .subhead .bold {
+	color: #000;
+}
+
+.col-2 .subhead {
+	font-weight: bold;
+}
+
+#header {
+	position: relative;
+}
+
+#header #foot {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
 }
 
 #header #social-buttons {
 	text-align: center;
+}
+
+#header #email {
+	text-align: center;
+	margin-bottom: 8px;
 }
 
 .github-button { 
@@ -125,11 +169,11 @@ a {
 	@keyframes logoIn {
 		0% {
 			opacity: 0;
-			transform: translateY(calc(50vh - 16vw));
+			transform: translateY(calc(50vh - 30vw)) scale(0.3);
 		}
 		50% {
 			opacity: 1;
-			transform: translateY(calc(50vh - 16vw));
+			transform: translateY(calc(50vh - 30vw)) scale(1);
 		}
 		100% {
 			opacity: 1;
@@ -142,7 +186,7 @@ a {
 	}
 
 	#header {
-		min-height: 420px;
+		min-height: 400px;
 	}
 
 	#header #bio {
@@ -157,17 +201,7 @@ a {
 		float: left;
 		width: 82px;
 		height: 82px;
-		background: pink;
 		margin: 5px 5px 1px 0;
-	}
-
-	#header #social-buttons {
-	}
-
-	#content {
-		padding: 0 10px;
-		margin-bottom: 70px;
-		min-height: calc(100vh - 420px);
 	}
 }
 
@@ -182,11 +216,11 @@ a {
 	@keyframes logoIn {
 		0% {
 			opacity: 0;
-			transform: translate(39.5vw, calc(50vh - 9.5vw));
+			transform: translate(39.5vw, calc(50vh - 9.5vw)) scale(0.3);
 		}
 		50% {
 			opacity: 1;
-			transform: translate(39.5vw, calc(50vh - 9.5vw));
+			transform: translate(39.5vw, calc(50vh - 9.5vw)) scale(1);
 		}
 		100% {
 			opacity: 1;
@@ -213,7 +247,6 @@ a {
 		height: 7vw;
 		max-width: 82px;
 		max-height: 82px;
-		background: pink;
 		margin: 5px 5px 1px 10px;
 	}
 
@@ -231,19 +264,23 @@ a {
 		height: calc(100vh - (28vw + 75px));
 	}
 
-	#header #social-buttons {
-		width: 21vw;
-		height: 50px;
-		padding-top: 5px;
-	}
-
 	#content {
+		overflow: scroll;
 		position: absolute;
 		left: 21vw;
 		bottom: 0;
 		right: 0;
 		top: 0;
-		padding: 0 10px;
+	}
+
+	#content .col-1 {
+		width: 60%;
+		float: left;
+	}
+
+	#content .col-2 {
+		width: 40%;
+		float: right;
 	}
 }
 
@@ -340,6 +377,5 @@ a {
 		bottom: 0;
 		right: 0;
 		top: 0;
-		padding: 0 10px;
 	}
 }

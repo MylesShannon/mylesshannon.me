@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" data-ng-app="myles">
+<html lang="en">
 	<head>
-		<base href="/" target="_self" />
 		<title>Myles Shannon | Web Developer</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="description" content="Full Stack Web Developer">
@@ -16,7 +15,7 @@
 		<meta name="msapplication-config" content="https://s3.amazonaws.com/myles-me-images/browserconfig.xml">
 		<meta name="theme-color" content="#ffffff">
 
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+		<link href="https://fonts.googleapis.com/css?family=Oxygen:400,700" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="libs/font-awesome/css/font-awesome.min.css">
 		<link rel="stylesheet" type="text/css" href="styles.min.css">
 	</head>
@@ -25,7 +24,7 @@
 			<div id="logo-wrap">
 				<div id="logo" class="animate-logo">
 					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" preserveAspectRatio="xMinYMin">
-						<circle fill="#00A99D" stroke="#00A99D" cx="150" cy="150" r="150" /></circle>
+						<circle fill="#45818e" stroke="#45818e" cx="150" cy="150" r="150" />
 						<path fill="#FFFFFF" d="M222.919,227.603c0,6.982-2.657,12.461-7.972,16.436S202.301,250,192.954,250
 									c-9.349,0-17-1.378-22.954-4.136v-12.139c3.769,1.684,7.773,3.008,12.014,3.975s8.188,1.45,11.845,1.45
 									c5.352,0,9.301-0.967,11.845-2.9s3.816-4.529,3.816-7.788c0-2.936-1.169-5.425-3.506-7.466s-7.161-4.458-14.474-7.251
@@ -33,42 +32,107 @@
 									c4.899-3.76,11.478-5.64,19.731-5.64c7.915,0,15.793,1.647,23.633,4.941l-4.297,10.474c-7.35-2.936-13.908-4.404-19.675-4.404
 									c-4.373,0-7.689,0.904-9.951,2.713c-2.261,1.808-3.392,4.198-3.392,7.17c0,2.041,0.452,3.787,1.356,5.236
 									c0.904,1.451,2.394,2.82,4.467,4.109c2.072,1.289,5.804,2.99,11.194,5.103c6.068,2.399,10.516,4.638,13.343,6.714
-									c2.827,2.077,4.899,4.423,6.22,7.036C222.259,220.979,222.919,224.058,222.919,227.603z"/></path>
+									c2.827,2.077,4.899,4.423,6.22,7.036C222.259,220.979,222.919,224.058,222.919,227.603z"/>
 						<path fill="#FFFFFF" d="M100.658,133.6L79.023,68.019h-0.408c0.578,9.74,0.868,18.871,0.868,27.393V133.6H68.41V55.074h17.196
 									l20.716,62.466h0.306l21.329-62.466h17.247V133.6h-11.736V94.767c0-3.902,0.093-8.987,0.281-15.254
-									c0.187-6.266,0.348-10.062,0.485-11.387h-0.408l-22.4,65.474H100.658z"/></path>
+									c0.187-6.266,0.348-10.062,0.485-11.387h-0.408l-22.4,65.474H100.658z"/>
 					</svg>
 				</div>
 			</div>
-			<div id="bio" class="animate-header-content">
-				<h3>Myles Shannon</h3>
-				<img id="profile-picture" src="https://s3.amazonaws.com/myles-me-images/me.jpg" />
+			<div id="bio" class="animate-content">
+				<img id="profile-picture" src="https://s3.amazonaws.com/myles-me-images/me.jpg" alt="that's me" />
 				<div id="bio-text">
-					Thanks for stopping by! Check out this awesome website about me! Thanks for stopping by! Check out this awesome website about me! Thanks for stopping by! Check out this awesome website about me! Thanks for stopping by! Check out this awesome website about me! Thanks for stopping by! Check out this awesome website about me!
-					Thanks for stopping by! Check out this awesome website about me! Thanks for stopping by! Check out this awesome website about me! Thanks for stopping by! Check out this awesome website about me! Thanks for stopping by! Check out this awesome website about me! Thanks for stopping by! Check out this awesome website about me!
+					Hello, and welcome! My name is <span class="bold">Myles</span>, and I'm a Web Developer in <span class="bold">Central Massachusetts</span>. I have a passion for clean code with an attention to detail. I am available for contract and full-time hire.
 				</div>
 			</div>
-			<div id="social-buttons" class="animate-header-content">
-				<a class="fa-stack fa-lg github-button" target="_blank" href="https://github.com/MylesShannon">
-					<i class="fa fa-square-o fa-stack-2x"></i>
-					<i class="fa fa-github fa-stack-1x"></i>
-				</a>
-				<a class="fa-stack fa-lg facebook-button" target="_blank" href="https://facebook.com/MylesShannon">
-					<i class="fa fa-square-o fa-stack-2x"></i>
-					<i class="fa fa-facebook fa-stack-1x"></i>
-				</a>
-				<a class="fa-stack fa-lg twitter-button" target="_blank" href="https://twitter.com/MylesShannon">
-					<i class="fa fa-square-o fa-stack-2x"></i>
-					<i class="fa fa-twitter fa-stack-1x"></i>
-				</a>
+			<div id="foot" class="animate-content">
+				<div id="social-buttons">
+					<a class="fa-stack fa-lg github-button" target="_blank" href="https://github.com/MylesShannon">
+						<i class="fa fa-square-o fa-stack-2x"></i>
+						<i class="fa fa-github fa-stack-1x"></i>
+					</a>
+					<a class="fa-stack fa-lg facebook-button" target="_blank" href="https://facebook.com/MylesShannon">
+						<i class="fa fa-square-o fa-stack-2x"></i>
+						<i class="fa fa-facebook fa-stack-1x"></i>
+					</a>
+					<a class="fa-stack fa-lg twitter-button" target="_blank" href="https://twitter.com/MylesShannon">
+						<i class="fa fa-square-o fa-stack-2x"></i>
+						<i class="fa fa-twitter fa-stack-1x"></i>
+					</a>
+				</div>
+				<div id="email">
+					<a class="bold" href="mailto:contact@mylesshannon.me" target="_blank">contact@mylesshannon.me</a>
+				</div>
 			</div>
 		</div>
 		<div id="content" class="animate-content">
-			<p>Thanks for stopping by! Check out this awesome website about me! Thanks for stopping by! Check out this awesome website about me! Thanks for stopping by! Check out this awesome website about me! Thanks for stopping by! Check out this awesome website about me! Thanks for stopping by! Check out this awesome website about me!
-					Thanks for stopping by! Check out this awesome website about me! Thanks for stopping by! Check out this awesome website about me! Thanks for stopping by! Check out this awesome website about me! Thanks for stopping by! Check out this awesome website about me! Thanks for stopping by! Check out this awesome website about me!</p>
+			<div class="col-1 animate-content-height">
+				<div id="experience">
+					<div class="head">EXPERIENCE</div>
+					<div class="subhead"><span class="bold">Glipple Inc</span>, Atlanta, GA &ndash; <span class="italic">CTO &amp; Co-founder</span></div>
+					<div class="detail">Designed &amp; developed powerful media rich web application using AngularJS, Ruby on Rails, and PHP</div>
+					<div class="detail">Cloud infrastructure administration with Amazon Web Services</div>
+					<div class="detail">Codebase maintenance and deployment</div>
+					<div class="detail">Workflow tasking and management</div>
+					<div class="subhead extra"><span class="bold">AT&amp;T Authorized Dealer</span>, Waltham, MA &ndash; <span class="italic">Sales</span></div>
+					<div class="detail">Advised customer purchasing and specialized in product knowledge</div>
+					<div class="subhead extra"><span class="bold">Worcester Telegram &amp; Gazette</span>, Worcester, MA &ndash; <span class="italic">Intern</span></div>
+					<div class="detail">Assisted in transition from ColdFusion to PHP codebase</div>
+					<div class="detail">Software quality assurance testing and verification</div>
+					<div class="detail">Miscellaneous market research</div>
+				</div>
+				<div id="education">
+					<div class="head">EDUCATION</div>
+					<div class="subhead"><span class="bold">Doherty Memorial High School</span>, Worcester, MA</div>
+					<div class="detail">AP Computer Science, Java</div>
+					<div class="detail">Engineering and Technology Academy</div>
+					<div class="detail">Focuses in manufacturing and electrical engineering</div>
+				</div>
+				<div id="extracurricular">
+					<div class="head">EXTRACURRICULAR</div>
+					<div class="subhead"><span class="bold">Boy Scouts of America</span> &ndash; 7 years</div>
+					<div class="detail">Numerous merit badges with several leadership positions</div>
+					<div class="subhead extra"><span class="bold">FIRST Robotics Competition</span> &ndash; 4 years</div>
+					<div class="detail">Developing embedded software in Java</div>
+					<div class="detail">Design and testing of embedded systems</div>
+				</div>
+			</div>
+			<div class="col-2 animate-content-height">
+				<div id="languages">
+					<div class="head">LANGUAGES</div>
+					<div class="detail">AngularJS, jQuery</div>
+					<div class="detail">HTML5, CSS3, SCSS, LESS</div>
+					<div class="detail">PHP, Python, Java, BASH, SQL</div>
+					<div class="detail">Laravel, Ruby on Rails, Node.js</div>
+					<div class="detail">Vagrant, Grunt, gulp.js</div>
+				</div>
+				<div id="portfolio">
+					<div class="head">PUBLIC PORTFOLIO</div>
+					<div class="subhead">github.com/MylesShannon</div>
+					<div class="detail">/QuickJot – AngularJS, HTML5</div>
+					<div class="detail">/api.mylesshannon.me – Laravel</div>
+					<div class="detail">/mylesshannon.me - CSS3, JS</div>
+					<div class="detail">/glipple-mvp - PHP, SQL, JS</div>
+					<div class="detail">/glipple-landing - PHP, SQL, JS</div>
+				</div>
+				<div id="interests">
+					<div class="head">INTERESTS</div>
+					<div class="detail">Information Technology</div>
+					<div class="detail">Reverse engineering</div>
+					<div class="detail">Photography</div>
+					<div class="detail">Videography</div>
+				</div>
+				<div id="awards">
+					<div class="head">AWARDS</div>
+					<div class="subhead">Order of the Arrow</div>
+					<div class="detail">National Honor Society of the Boy Scouts of America</div>
+					<div class="subhead extra">FIRST Robotics Competition</div>
+					<div class="detail">Creativity Award - 2009</div>
+					<div class="detail">Judges’ Award - 2007</div>
+				</div>
+			</div>
 		</div>
 		<script type="text/javascript" src="libs/jquery/js/jquery.min.js"></script>
-		<!-- <script type="text/javascript" src="libs/animejs/js/anime.min.js"></script> -->
 		<script type="text/javascript" src="scripts.min.js"></script>
 
 		<!-- build:script analytics -->
