@@ -81,7 +81,7 @@ a {
 }
 
 .bold {
-	font-weight: bold;
+	font-weight: 700;
 }
 
 .italic {
@@ -101,13 +101,13 @@ a {
 
 .head {
 	color: #45818e;
-	font-weight: bold;
+	font-weight: 700;
 	margin-top: 18pt;
 	margin-bottom: 12pt;
+	font-size: 16px;
 }
 
 .subhead {
-	margin-bottom: 12pt;
 	color: #434343;
 }
 
@@ -123,12 +123,24 @@ a {
 	color: #000;
 }
 
+.col-1 .date {
+	margin-bottom: 12pt;
+	font-size: 14px;
+	font-weight: 300;
+}
+
 .col-2 .subhead {
-	font-weight: bold;
+	font-weight: 700;
+	margin-bottom: 12pt;
 }
 
 #header {
 	position: relative;
+}
+
+#header #profile-picture {
+	border: 2px solid #45818e;
+	border-radius: 1px;
 }
 
 #header #foot {
@@ -194,7 +206,7 @@ a {
 	}
 
 	#header #bio-text {
-		font-size: 14px;
+		font-size: 16px;
 	}
 
 	#header #profile-picture {
@@ -216,11 +228,11 @@ a {
 	@keyframes logoIn {
 		0% {
 			opacity: 0;
-			transform: translate(39.5vw, calc(50vh - 9.5vw)) scale(0.3);
+			transform: translate(39.5vw, calc(50vh - 10.5vw)) scale(0.3);
 		}
 		50% {
 			opacity: 1;
-			transform: translate(39.5vw, calc(50vh - 9.5vw)) scale(1);
+			transform: translate(39.5vw, calc(50vh - 10.5vw)) scale(1);
 		}
 		100% {
 			opacity: 1;
@@ -265,6 +277,7 @@ a {
 	}
 
 	#content {
+		font-size: 16px;
 		overflow: scroll;
 		position: absolute;
 		left: 21vw;
