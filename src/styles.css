@@ -263,8 +263,8 @@ a {
 	}
 
 	#header #bio {
-		width: calc(21vw + 14px);
-		height: calc(100vh - (21vw + 50px));
+		width: calc(21vw + 20px);
+		height: calc(100vh - (21vw + 76px));
 		overflow-y: scroll;
 		overflow-x: hidden;
 	}
@@ -278,7 +278,7 @@ a {
 
 	#content {
 		font-size: 16px;
-		overflow: scroll;
+		overflow: auto;
 		position: absolute;
 		left: 21vw;
 		bottom: 0;
