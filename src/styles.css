@@ -115,21 +115,21 @@ a {
 	margin-top: 12pt;
 }
 
-.col-1, .col-2 {
+#col-1, #col-2 {
 	padding: 0 10px;
 }
 
-.col-1 #experience .subhead .bold {
+#col-1 #experience .subhead .bold {
 	color: #000;
 }
 
-.col-1 .date {
+#col-1 .date {
 	margin-bottom: 12pt;
 	font-size: 14px;
 	font-weight: 300;
 }
 
-.col-2 .subhead {
+#col-2 .subhead {
 	font-weight: 700;
 	margin-bottom: 12pt;
 }
@@ -286,12 +286,12 @@ a {
 		top: 0;
 	}
 
-	#content .col-1 {
+	#content #col-1 {
 		width: 60%;
 		float: left;
 	}
 
-	#content .col-2 {
+	#content #col-2 {
 		width: 40%;
 		float: right;
 	}
