@@ -3,392 +3,91 @@
 	font-family: 'Oxygen', sans-serif;
 }
 
-html {
-	height: 100%;
-}
-
 body {
+	display: flex;
+	height: 100%;
+	width: 100%;
 	margin: 0;
-	height: 100%;
 }
 
-#logo {
-	position: relative;
+.margin {
+	height: 100vh;
+	width: 30vw;
+	padding: 10px;
 }
 
-svg {
-	overflow: visible;
+#all-about-me {
+	height: 100vh;
+	width: 40vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#logo-wrap {
 	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-}
-
-@keyframes headerIn {
-	from {
-		background: #FFF;
-	}
-	to {
-		background: #d3d3d3;
-	}
-}
-
-@keyframes contentIn {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
-}
-
-@keyframes contentInHeight {
-	from {
-		height: 0;
-		overflow: hidden;
-	}
-	to {
-		height: auto;
-		overflow: auto;
-	}
-}
-
-.animate-header {
-	background: #FFF;
-	animation: headerIn 1500ms forwards linear 2800ms;
-}
-
-.animate-content {
-	opacity: 0;
-	animation: contentIn 1500ms forwards linear 2800ms;
-}
-
-.animate-content-height {
-	height: 0;
-	overflow: hidden;
-	animation: contentInHeight 0s forwards ease-in-out 2800ms;
-}
-
-.animate-logo {
-	opacity: 0;
-	animation: logoIn 2800ms forwards ease-in-out 0s;
-}
-
-a {
-	color: #000;
-	text-decoration: none;
-}
-
-.bold {
-	font-weight: 700;
-}
-
-.italic {
-	font-style: italic;
-}
-
-#content {
-	padding: 5px 0;
-	background: #FFF;
-	box-shadow: 3px 3px 20px 5px rgba(162,171,176,1);
-}
-
-.detail {
-	margin-bottom: 8pt;
-	color: #666666;
-}
-
-.head {
-	color: #45818e;
-	font-weight: 700;
-	margin-top: 12pt;
-	margin-bottom: 10pt;
-	font-size: 16px;
-}
-
-.subhead {
-	color: #434343;
-}
-
-.subhead.extra {
-	margin-top: 12pt;
-}
-
-#col-1, #col-2 {
-	padding: 0 10px;
-}
-
-#col-1 #experience .subhead .bold {
-	color: #000;
-}
-
-#col-1 .date {
-	margin-bottom: 12pt;
-	font-size: 14px;
-	font-weight: 300;
-}
-
-#col-2 .subhead {
-	font-weight: 700;
-	margin-bottom: 12pt;
-}
-
-#header {
-	position: relative;
-}
-
-#header #profile-picture {
-	border: 2px solid #45818e;
-	border-radius: 1px;
-}
-
-#header #foot {
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-}
-
-#header #social-buttons {
-	text-align: center;
-}
-
-#header #email {
 	text-align: center;
 	margin-bottom: 8px;
 }
+	#logo > svg {
+		width: 200px;
+		height: 200px;
+	}
 
-.github-button { 
-	color: #000000;
+#title-wrap {
+	width: 100%;
+	text-align: center;
+	margin-bottom: 8px;
 }
+	#title {
+		font-size: 24px;
+	}
 
-.facebook-button {
-	color: #3b5998;
+	#title .name {
+		font-weight: bold;
+	}
+
+#profiles {
+	display: flex;
+	justify-content: center;
+	width: 100%;
 }
-
-.twitter-button {
-	color: #00aced;
-}
-
-/* smaller screen */
-@media only screen and (max-width: 768px) {
-	#logo-wrap {
-		width: 100vw;
-		height: 31vw;
-		padding: 1vw 35vw;
+	#profiles #github {
+		text-align: center;
+		color: #000000;
 	}
-
-	@keyframes logoIn {
-		0% {
-			opacity: 0;
-			transform: translateY(calc(50vh - 30vw)) scale(0.3);
+		#profiles #github .fa-github {
+			bottom: 1px;
 		}
-		50% {
-			opacity: 1;
-			transform: translateY(calc(50vh - 30vw)) scale(1);
+
+	#profiles #linkedin {
+		text-align: center;
+		color: #0077b5;
+	}
+
+	#profiles #twitter {
+		text-align: center;
+		color: #00aced;
+	}
+
+	#profiles #facebook {
+		text-align: center;
+		color: #3b5998;
+	}
+
+	#profiles #email {
+		text-align: center;
+		color: #000000;
+	}
+		#profiles #email .fa-envelope {
+			bottom: 3px;
 		}
-		100% {
-			opacity: 1;
+
+	#profiles #resume {
+		text-align: center;
+		color: #787878;
+	}
+		#profiles #resume .fa-file-text {
+			left: 1px;
+			bottom: 2px;
 		}
-	}
-
-	#logo {
-		height: 30vw;
-		width: 30vw;
-	}
-
-	#header {
-		min-height: 400px;
-	}
-
-	#header #bio {
-		padding: 5px;
-	}
-
-	#header #bio-text {
-		font-size: 16px;
-	}
-
-	#header #profile-picture {
-		float: left;
-		width: 82px;
-		height: 82px;
-		margin: 5px 5px 1px 0;
-	}
-}
-
-/* larger screen */
-@media only screen and (min-width: 768px) {
-	#logo-wrap {
-		width: 21vw;
-		height: 21vw;
-		padding: 2vw;
-	}
-
-	@keyframes logoIn {
-		0% {
-			opacity: 0;
-			transform: translate(39.5vw, calc(50vh - 10.5vw)) scale(0.3);
-		}
-		50% {
-			opacity: 1;
-			transform: translate(39.5vw, calc(50vh - 10.5vw)) scale(1);
-		}
-		100% {
-			opacity: 1;
-		}
-	}
-
-	#logo {
-		height: 17vw;
-		width: 17vw;
-	}
-
-	#header a:hover {
-		color: gray;
-	}
-
-	#header {
-		width: 21vw;
-		height: 100vh;
-	}
-
-	#header #profile-picture {
-		float: left;
-		width: 7vw;
-		height: 7vw;
-		max-width: 82px;
-		max-height: 82px;
-		margin: 5px 5px 1px 10px;
-	}
-
-	#header #bio {
-		width: calc(21vw + 20px);
-		height: calc(100vh - (21vw + 76px));
-		overflow-y: scroll;
-		overflow-x: hidden;
-	}
-
-	#header #bio-text {
-		padding: 0 10px;
-		font-size: 16px;
-		width: 21vw;
-		height: calc(100vh - (28vw + 75px));
-	}
-
-	#content {
-		font-size: 16px;
-		overflow: auto;
-		position: absolute;
-		left: 21vw;
-		bottom: 0;
-		right: 0;
-		top: 0;
-	}
-
-	#content #col-1 {
-		width: 60%;
-		float: left;
-	}
-
-	#content #col-2 {
-		width: 40%;
-		float: right;
-	}
-}
-
-@media print, speech {
-	.animate-header {
-		background: #FFF;
-		animation: headerIn 0s forwards linear 0s;
-	}
-
-	.animate-header-content {
-		opacity: 0;
-		animation: headerContentIn 0s forwards linear 0s;
-	}
-
-	.animate-content {
-		opacity: 0;
-		height: 0;
-		overflow: hidden;
-		animation: contentIn 0s forwards linear 0s;
-	}
-
-	.animate-logo {
-		opacity: 0;
-		animation: logoIn 0s forwards ease-in-out 0s;
-	}
-
-	#logo-wrap {
-		width: 21vw;
-		height: 21vw;
-		padding: 2vw;
-	}
-
-	@keyframes logoIn {
-		0% {
-			opacity: 0;
-			transform: translate(39.5vw, calc(50vh - 9.5vw));
-		}
-		50% {
-			opacity: 1;
-			transform: translate(39.5vw, calc(50vh - 9.5vw));
-		}
-		100% {
-			opacity: 1;
-		}
-	}
-
-	#logo {
-		height: 17vw;
-		width: 17vw;
-	}
-
-	#header a:hover {
-		color: gray;
-	}
-
-	#header {
-		width: 21vw;
-		height: 100vh;
-	}
-
-	#header #profile-picture {
-		float: left;
-		width: 7vw;
-		height: 7vw;
-		max-width: 82px;
-		max-height: 82px;
-		background: pink;
-		margin: 5px 5px 1px 10px;
-	}
-
-	#header #bio {
-		width: calc(21vw + 14px);
-		height: calc(100vh - (21vw + 50px));
-		overflow-y: scroll;
-		overflow-x: hidden;
-	}
-
-	#header #bio-text {
-		padding: 0 10px;
-		font-size: 16px;
-		width: 21vw;
-		height: calc(100vh - (28vw + 75px));
-	}
-
-	#header #social-buttons {
-		width: 21vw;
-		height: 50px;
-		padding-top: 5px;
-	}
-
-	#content {
-		position: absolute;
-		left: 21vw;
-		bottom: 0;
-		right: 0;
-		top: 0;
-	}
-}
